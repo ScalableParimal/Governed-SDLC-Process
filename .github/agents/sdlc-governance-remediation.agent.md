@@ -147,9 +147,9 @@ The same-framework Governance Audit must also assess these seven separately repo
 - Governance Remediation mechanism: `.github/agents/sdlc-governance-remediation.agent.md`
 - SDLC Process Orchestration mechanism: `.github/agents/sdlc-process-orchestrator.agent.md`
 - SDLC Portability Assessment mechanism: `.github/agents/portability-assessment.agent.md`, `.github/skills/portability-assessment/SKILL.md`, and its supporting Guideline, Prompt, and Request
-- Governance Amendment Application mechanism: its Guideline, Prompt, Request, Skill, and Agent
-- Independent Governance Verification mechanism: its Guideline, Prompt, Request, Skill, and Agent
-- Independent Governance Review mechanism: its Guideline, Prompt, Request, Skill, and Agent
+- Governance Amendment Application mechanism: `.github/agents/governance-amendment-application.agent.md`, `.github/skills/governance-amendment-application/SKILL.md`, and its Guideline, Prompt, Request, Skill, and Agent
+- Independent Governance Verification mechanism: `.github/agents/independent-governance-verification.agent.md`, `.github/skills/independent-governance-verification/SKILL.md`, and its Guideline, Prompt, Request, Skill, and Agent
+- Independent Governance Review mechanism: `.github/agents/independent-governance-review.agent.md`, `.github/skills/independent-governance-review/SKILL.md`, and its Guideline, Prompt, Request, Skill, and Agent
 
 
 These mechanisms are governed by the same three Masters but are not added to the 52-core count. The Governance Audit remains strictly read-only. Governance Control responsibilities and Orchestration responsibilities remain distinct; none creates independent governance authority.
