@@ -249,6 +249,14 @@ Perform the audit in this order:
 
 For Application, Verification, and Review, `CANNOT COMPLETE` is mandatory when required role definitions are absent or runtime capability evidence is unavailable. An Agent definition is not runtime-capability evidence. An uninvoked gate is not a passing gate for amendment effectiveness.
 
+#### Non-circular integrity chain for the Governance Audit evidence row
+
+The canonical Audit report must identify the current Audit attempt, canonical report, terminal result, and evidence records by path and stable record identity. It must include SHA-256 fingerprints for source and other referenced records whose final bytes are already available when the report is prepared. Because the canonical report is immutable and precedes `result.json`, it must not claim a final SHA-256 fingerprint for itself or for the not-yet-published Audit result. The result identity and path may be stated without a result fingerprint.
+
+After the canonical report and evidence are durable, the Audit actor must publish `result.json` under the common publication contract. The result must bind the final canonical report by path, identity, and SHA-256, and bind each required evidence record by path, identity, and SHA-256. The Audit result is the first completed-record binding of the Audit report; this does not permit omitting or weakening any required evidence check.
+
+The existing Governance Remediation canonical final report is the terminal handoff anchor for the final Audit result in the same Work ID and cycle. It must resolve the final Audit report and result, independently recompute and validate the Audit result's SHA-256 against its stored bytes, confirm the result's binding to the final Audit report, and record the Audit result path, result identity, verified SHA-256, and validation outcome in the canonical Remediation report. This requirement applies whether the final Audit reports findings or an empty findings list. The Remediation report is prepared after the Audit result and is not a prerequisite for publishing that Audit result or determining the Audit's own outcome. The subsequent Remediation `result.json` binds the final Remediation report by path, identity, and SHA-256 under the common publication contract. The Audit actor must not publish or modify Remediation records.
+
 
 8. Inspect repository paths and cross-document references.
 9. Compare the detailed artifacts against the Master Governance.
