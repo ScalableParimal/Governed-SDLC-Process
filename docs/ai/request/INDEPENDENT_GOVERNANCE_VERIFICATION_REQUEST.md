@@ -12,4 +12,3 @@ Human stage-start instruction: [FRESH ATTRIBUTABLE REQUEST FOR THIS VERIFICATION
 Preparer / applier / verifier / reviewer identities: [ALL FOUR DISTINCT; EVIDENCE REFERENCES]
 Runtime capability evidence: [READ-ONLY SOURCE/EVIDENCE ACCESS; SHA-256; READ-ONLY CHECK EXECUTION; OWN-RECORD PUBLICATION; PERMISSION EVIDENCE]
 Verifier output location: [AUTHORIZED WORK-ID/ATTEMPT PATH; VERIFIER-OWNED]
-If source-write exclusion or any required capability cannot be confirmed: [CANNOT COMPLETE; NO PASS HANDOFF]
