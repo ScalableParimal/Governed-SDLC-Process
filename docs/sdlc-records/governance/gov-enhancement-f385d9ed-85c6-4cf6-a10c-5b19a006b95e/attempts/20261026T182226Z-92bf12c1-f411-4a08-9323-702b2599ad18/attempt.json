@@ -1,0 +1,68 @@
+{
+  "schema_version": "1.0",
+  "record_type": "governed_process_invocation_attempt",
+  "record_identity": "20261026T182226Z-92bf12c1-f411-4a08-9323-702b2599ad18",
+  "work_id": "gov-enhancement-f385d9ed-85c6-4cf6-a10c-5b19a006b95e",
+  "process": {
+    "name": "SDLC Governance Audit",
+    "actor": "SDLC Governance Audit Agent",
+    "agent_path": ".github/agents/sdlc-governance-audit.agent.md",
+    "skill_path": ".github/skills/sdlc-governance-audit/SKILL.md",
+    "stage": "one complete read-only Governance Audit"
+  },
+  "repository": {
+    "canonical": "ScalableParimal/Governed-SDLC-Process",
+    "local_root": "C:\\PARIMAL_SHERE\\SCALABLE_SOLUTIONS\\Governed-SDLC-Process",
+    "commit": "f7acc1c5307d1d9e08dd93422f157b8769717a25",
+    "working_tree": "clean"
+  },
+  "persistence": {
+    "root": "docs/sdlc-records/governance/",
+    "work_scope": "docs/sdlc-records/governance/gov-enhancement-f385d9ed-85c6-4cf6-a10c-5b19a006b95e/",
+    "attempt_path": "docs/sdlc-records/governance/gov-enhancement-f385d9ed-85c6-4cf6-a10c-5b19a006b95e/attempts/20261026T182226Z-92bf12c1-f411-4a08-9323-702b2599ad18/attempt.json",
+    "first_use_bootstrap": true,
+    "work_id_collision_check": {
+      "governance_root": "absent before publication",
+      "product_root": "absent before publication",
+      "structured_record_fields": "searched; no match before publication"
+    }
+  },
+  "human_authorization": {
+    "decision": "YES; explicitly adopts governance root and authorizes one-time bootstrap and one complete read-only Audit",
+    "source_type": "GitHub issue comment",
+    "issue_url": "https://github.com/ScalableParimal/Governed-SDLC-Process/issues/10",
+    "permalink": "https://github.com/ScalableParimal/Governed-SDLC-Process/issues/10#issuecomment-6423812661",
+    "comment_id": 6423812661,
+    "author": {
+      "login": "ScalableParimal",
+      "user_id": 226102895,
+      "association": "OWNER"
+    },
+    "created_at": "2026-10-26T18:13:10Z",
+    "updated_at": "2026-10-26T18:13:10Z",
+    "body_sha256_utf8": "0364fd4b924fdbc5cdc0484fa09a6a1380d3f2c5a2d026e1c5d1b0584a884e60",
+    "replacement_characters_present": false,
+    "authority_validation": "Live GitHub issue/comment response; repository owner identity and OWNER association confirmed; latest explicit adoption decision among issue comments."
+  },
+  "master_sources": {
+    "docs/ai/sdlc/SDLC_GOVERNANCE.md": {
+      "sha256": "a89a0e74b9201496f03749aa7a1764380d7e483a0a158956b29ce8b746c1e014"
+    },
+    "docs/ai/sdlc/SDLC_ARTIFACT_GOVERNANCE.md": {
+      "sha256": "86ec0b35b723e6ead868707945d9b425b781863a9520bb916792477d76703b13"
+    },
+    "docs/ai/sdlc/SDLC_TRACEABILITY_AND_CHANGE_CONTROL.md": {
+      "sha256": "f2698358d56e02826a99a5511d3428643a2a53627a3dcb2105a41062f4c42803"
+    }
+  },
+  "invocation_preflight": {
+    "actor_identity": "SDLC Governance Audit Agent, explicitly designated by the current invocation and external decision",
+    "host_effective_account": "int-scl-010\\parimal",
+    "host_permission_evidence": "Read-only whoami/group and ACL inspection; governance root inherited Authenticated Users Modify and Administrators FullControl; this account is an authenticated user. No source-write permission is authorized.",
+    "role_capabilities": "Read governance scope; publish only this actor?s authorized records under the exact Work ID scope. No audit source changes, remediation, product reads, independent review/verification, commit, branch, or push.",
+    "publication_route": "Python on the local PowerShell execution host; create attempt.json with exclusive-create (O_CREAT|O_EXCL), flush/fsync, then read back and hash. Parent/root ACL inspection completed; record path scoped by current authorization.",
+    "authorization_and_scope": "Validated against live external decision; one Audit only; exact repo/commit/Master fingerprints/root/Work ID/actor/scope match."
+  },
+  "state": "invocation_published_before_substantive_audit",
+  "created_at_utc": "2026-10-26T18:22:26.171733Z"
+}
