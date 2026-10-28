@@ -17,8 +17,9 @@ Its purpose is to eliminate the need for repeated manual execution of:
 4. Human Decision / Approval
 5. Apply Approved Governance Correction
 6. Independent Governance Verification
-7. Full Governance Audit
-8. Repeat until the Governance framework reaches a final `CONSISTENT` status
+7. Independent Governance Review
+8. Full Governance Audit
+9. Repeat until the Governance framework reaches a final `CONSISTENT` status
 
 The agent is an orchestration agent.
 
@@ -202,7 +203,7 @@ A product-level finding must be handled by the product SDLC process, not by this
 
 The agent must operate according to:
 
-> Audit → Investigate → Decide → Human Approval → Apply → Independently Verify → Audit Again
+> Audit → Investigate → Decide → Human Approval → Apply → Independently Verify → Independently Review → Audit Again
 
 The agent must never bypass a required stage.
 
@@ -712,11 +713,13 @@ Do not continue under the original approval.
 
 ---
 
-# 23. Independent Governance Verification
+# 23. Independent Governance Verification and Review
 
-Every applied correction must be independently verified before the next full Governance Audit.
+Every applied correction must pass independent Governance Verification followed by a separate Independent Governance Review before the next full Governance Audit.
 
 Verification must be independent of the correction application.
+
+After Verification passes, a separately initiated Independent Governance Review must pass before any subsequent complete Governance Audit. Review is read-only and evaluates governance correctness, authority, scope, lifecycle, human gates, and assurance adequacy. The Review actor must be distinct from the correction preparer, applier, and Verification actor; each process must retain its own fresh stage-start and actor-owned attempt/report/result/evidence, bound to predecessor records, as required by Master Governance §§3.5 and 30.1. A missing, incomplete, or failing Review blocks the Audit and any completion declaration. Verification and Review must not be combined or treated as substitutes.
 
 Verify:
 
@@ -756,9 +759,9 @@ Register it for the next remediation cycle.
 
 ---
 
-# 25. Full Governance Audit After Verification
+# 25. Full Governance Audit After Verification and Review
 
-After successful independent verification:
+Only after successful independent Verification followed by a separate passing Independent Governance Review:
 
 Run the complete Governance Audit again.
 
@@ -789,7 +792,7 @@ If the new full Governance Audit reports findings:
 
 Repeat:
 
-> Audit → Investigate → Decide → Human Approval → Apply → Independently Verify → Audit
+> Audit → Investigate → Decide → Human Approval → Apply → Independently Verify → Independently Review → Audit
 
 Continue across remediation cycles.
 
@@ -806,7 +809,9 @@ The final stop condition is a clean Governance Audit.
 
 # 27. Final Stop Condition
 
-The remediation process may be declared complete only when the complete Governance Audit reports:
+The remediation process may be declared complete only when the complete Governance Audit reports the required clean result and, for any cycle that applied a correction, a distinct passing Independent Governance Review followed the passing Verification and preceded that Audit. The Review must have its own fresh invocation and actor-owned result; a missing, incomplete, or failing Review blocks completion even if the Audit reports `CONSISTENT`.
+
+The complete Governance Audit must report:
 
 - Critical = 0
 - High = 0
@@ -1150,6 +1155,9 @@ Full Governance Audit
            Independent Verification
                      |
                      v
+          Independent Governance Review
+                     |
+                     v
             Full Governance Audit
                      |
                      +---- Findings ----> Next Cycle
@@ -1183,7 +1191,7 @@ If any required answer is unclear:
 
 Follow the Governance Audit and Remediation reporting and handoff rules in section 30.1 of SDLC_TRACEABILITY_AND_CHANGE_CONTROL.md.
 
-The complete canonical remediation report must retain all status fields, mechanism-alignment results, cycle history, decisions, approvals, corrections, independent verification, and final audit confirmation required below. Use compact tables and references to process-owned reports instead of reproducing their bodies.
+The complete canonical remediation report must retain all status fields, mechanism-alignment results, cycle history, decisions, approvals, corrections, independent verification, independent governance review, and final audit confirmation required below. Use compact tables and references to process-owned reports instead of reproducing their bodies.
 
 Normally present a concise human-facing status and canonical report reference. Preserve actual outcomes, unresolved findings, material limitations, exact pending decisions or approvals, and the next permitted process. Sections 18, 38, and 44 retain their required decision, blocked, and paused information; do not abbreviate away information needed for informed human action.
 
@@ -1276,6 +1284,10 @@ List:
 ## Independent Verification
 
 State whether each applied correction passed independent verification.
+
+## Independent Governance Review
+
+For each correction cycle, state whether the separately initiated Independent Governance Review passed after Verification and before the final Audit; reference its actor-owned attempt, report, and result. If no correction cycle required Review, state that it is not applicable with the reason.
 
 ## Final Audit
 
