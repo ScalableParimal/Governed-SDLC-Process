@@ -1,3 +1,8 @@
+---
+name: independent-governance-verification
+description: Executes the governed Independent Governance Verification process using the repository Independent Governance Verification Guideline, Prompt, and Request.
+---
+
 # Independent Governance Verification Skill
 
 Follow the current Verification Guideline, Prompt, and Request. Establish actor identity and prove it differs from the preparer, applier, and reviewer. Resolve the exact proposal, Human Approval, application report, repository state, and target evidence.

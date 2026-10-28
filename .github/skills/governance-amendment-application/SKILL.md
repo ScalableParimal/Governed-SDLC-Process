@@ -1,3 +1,8 @@
+---
+name: governance-amendment-application
+description: Executes the governed Governance Amendment Application process using the repository Governance Amendment Application Guideline, Prompt, and Request.
+---
+
 # Governance Amendment Application Skill
 
 Use the current Application Guideline, Prompt, Request, exact proposal report, and Human Approval record. This Skill permits only controlled application after all approval and actor-authority preconditions are established.

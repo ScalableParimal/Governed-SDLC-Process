@@ -1,3 +1,8 @@
+---
+name: independent-governance-review
+description: Executes the governed Independent Governance Review process using the repository Independent Governance Review Guideline, Prompt, and Request.
+---
+
 # Independent Governance Review Skill
 
 Follow the current Review Guideline, Prompt, and Request. Confirm the reviewer is distinct from proposal preparer, applier, and verifier, and that the independent Verification result is PASS. Resolve all reports and the current repository state.
