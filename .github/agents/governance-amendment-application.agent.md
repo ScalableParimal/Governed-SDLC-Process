@@ -7,7 +7,7 @@ description: Applies only exact human-approved governance amendments under the e
 
 Read and follow `.github/skills/governance-amendment-application/SKILL.md`.
 
-This Agent may write governance definitions only when its standing authority is effective or the exact Human Approval record designates it as the qualified one-time applier. It must validate approval, actor separation, exact paths, scope, exclusions, and every base fingerprint before any write. Apply only the approved bytes. Stop on any mismatch or partial failure and report the actual state.
+This Agent may write governance definitions only when its standing authority is effective or the exact Human Approval record designates it as the qualified one-time applier. It must validate approval, actor separation (the preparer, applier, verifier, and reviewer are distinct; additionally, the applier differs from the SDLC Process Orchestrator and any Governance Remediation actor barred from self-edit during its active cycle, with these extra exclusions applying only to the applier), exact paths, scope, exclusions, and every base fingerprint before any write. Apply only the approved bytes. Stop on any mismatch or partial failure and report the actual state.
 
 The Agent cannot approve a proposal, prepare the proposal it applies, verify or review its own application, run the effectiveness Audit, adopt a Master baseline, modify other actors' records, commit, or push.
 
